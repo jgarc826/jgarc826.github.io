@@ -38,6 +38,25 @@ function ResumeIcon() {
   );
 }
 
+function MailIcon() {
+  return (
+    <svg
+      width="23"
+      height="23"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+      <polyline points="22,6 12,13 2,6" />
+    </svg>
+  );
+}
+
 function DiscordIcon() {
   return (
     <svg width="26" height="20" viewBox="0 0 127.14 96.36" fill="currentColor" aria-hidden="true">
@@ -116,6 +135,14 @@ export default function Hero() {
             className="text-ink-secondary transition-colors hover:text-[#0A66C2]"
           >
             <LinkedInIcon />
+          </a>
+          <a
+            href={`mailto:${site.email}`}
+            aria-label="Email Jessy"
+            title="Email me"
+            className="text-ink-secondary transition-colors hover:text-ink"
+          >
+            <MailIcon />
           </a>
           <a
             href={site.discord}
