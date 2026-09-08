@@ -1,6 +1,13 @@
 import { projects } from "@/lib/content";
 import Chevron from "./Chevron";
 
+const coverClasses = {
+  blue: "cover-blue",
+  violet: "cover-violet",
+  sunrise: "cover-sunrise",
+  mint: "cover-mint",
+} as const;
+
 export default function Projects() {
   return (
     <section id="projects" className="scroll-mt-12 bg-surface px-5 py-24 md:py-32">
@@ -19,31 +26,42 @@ export default function Projects() {
               style={{ transitionDelay: `${i * 0.08}s` }}
               className={project.wide ? "md:col-span-2" : ""}
             >
-              <article className="flex h-full flex-col rounded-[20px] bg-white p-8 shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)]">
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full bg-surface px-3 py-1 text-xs font-medium text-ink-secondary"
+              <article
+                className={`flex h-full flex-col overflow-hidden rounded-[20px] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)] ${
+                  project.wide ? "md:flex-row" : ""
+                }`}
+              >
+                <div
+                  className={`h-44 shrink-0 ${
+                    coverClasses[project.cover ?? "blue"]
+                  } ${project.wide ? "md:h-auto md:w-[45%]" : ""}`}
+                />
+                <div className="flex flex-1 flex-col p-8">
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full bg-surface px-3 py-1 text-xs font-medium text-ink-secondary"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <h3 className="mt-5 text-2xl font-semibold tracking-tight">
+                    {project.title}
+                  </h3>
+                  <p className="mt-2 max-w-[560px] leading-relaxed text-ink-secondary">
+                    {project.description}
+                  </p>
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      className="mt-5 inline-flex items-center gap-1 text-[15px] font-medium text-accent hover:underline"
                     >
-                      {tag}
-                    </span>
-                  ))}
+                      Learn more <Chevron />
+                    </a>
+                  )}
                 </div>
-                <h3 className="mt-5 text-2xl font-semibold tracking-tight">
-                  {project.title}
-                </h3>
-                <p className="mt-2 max-w-[560px] leading-relaxed text-ink-secondary">
-                  {project.description}
-                </p>
-                {project.link && (
-                  <a
-                    href={project.link}
-                    className="mt-5 inline-flex items-center gap-1 text-[15px] font-medium text-accent hover:underline"
-                  >
-                    Learn more <Chevron />
-                  </a>
-                )}
               </article>
             </div>
           ))}

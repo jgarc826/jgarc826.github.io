@@ -1,9 +1,10 @@
 import { site } from "@/lib/content";
 
 const links = [
-  { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "#about", mobileHidden: true },
+  { label: "Projects", href: "#projects", mobileHidden: false },
+  { label: "Experience", href: "#experience", mobileHidden: true },
+  { label: "Contact", href: "#contact", mobileHidden: false },
 ];
 
 export default function Nav() {
@@ -18,7 +19,9 @@ export default function Nav() {
             <a
               key={link.href}
               href={link.href}
-              className="text-xs text-ink/80 transition-colors hover:text-ink"
+              className={`text-xs text-ink/80 transition-colors hover:text-ink ${
+                link.mobileHidden ? "hidden sm:block" : ""
+              }`}
             >
               {link.label}
             </a>

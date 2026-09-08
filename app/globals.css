@@ -27,6 +27,64 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+::selection {
+  background: rgba(0, 113, 227, 0.18);
+}
+
+/* Apple-style gradient text accent */
+.text-gradient {
+  background: linear-gradient(90deg, #0090f7 0%, #6a5cff 50%, #c04cfb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Gradient bento card */
+.bento-gradient {
+  background: linear-gradient(135deg, #0090f7 0%, #6a5cff 55%, #c04cfb 100%);
+}
+
+/* Soft gradient "cover art" for project cards */
+.cover-blue {
+  background-image:
+    radial-gradient(90% 90% at 15% 10%, rgba(0, 113, 227, 0.28), transparent 60%),
+    linear-gradient(135deg, #bfdcff 0%, #e9f2ff 100%);
+}
+.cover-violet {
+  background-image:
+    radial-gradient(90% 90% at 85% 15%, rgba(106, 92, 255, 0.3), transparent 60%),
+    linear-gradient(135deg, #d9d4ff 0%, #efeeff 100%);
+}
+.cover-sunrise {
+  background-image:
+    radial-gradient(90% 90% at 20% 85%, rgba(255, 111, 74, 0.25), transparent 60%),
+    linear-gradient(135deg, #ffd8c7 0%, #fff1e9 100%);
+}
+.cover-mint {
+  background-image:
+    radial-gradient(90% 90% at 80% 80%, rgba(48, 209, 88, 0.22), transparent 60%),
+    linear-gradient(135deg, #c9efd6 0%, #ecfaf1 100%);
+}
+
+/* Bouncing scroll cue on the hero */
+@keyframes float-down {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 6px);
+  }
+}
+.scroll-cue {
+  animation: float-down 2.2s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue {
+    animation: none;
+  }
+}
+
 /* Frosted-glass nav, like apple.com */
 .nav-blur {
   background: rgba(255, 255, 255, 0.72);

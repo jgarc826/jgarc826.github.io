@@ -9,7 +9,7 @@ export default function Contact() {
           data-reveal
           className="text-[clamp(2rem,5vw,3rem)] font-semibold tracking-[-0.015em]"
         >
-          Let&apos;s get in touch.
+          Let&apos;s <span className="text-gradient">get in touch</span>.
         </h2>
         <p
           data-reveal

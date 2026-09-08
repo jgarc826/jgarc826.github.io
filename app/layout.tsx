@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Jessy Garcia",
   description:
-    "Personal site of Jessy Garcia — computer science student at UC Riverside.",
+    "Personal site of Jessy Garcia — data science student at UC Riverside.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
