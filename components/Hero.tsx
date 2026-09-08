@@ -1,4 +1,4 @@
-import { site } from "@/lib/content";
+import { intro, site } from "@/lib/content";
 import Chevron from "./Chevron";
 
 function GitHubIcon() {
@@ -13,6 +13,25 @@ function LinkedInIcon() {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0Z" />
+    </svg>
+  );
+}
+
+function MailIcon() {
+  return (
+    <svg
+      width="23"
+      height="23"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+      <polyline points="22,6 12,13 2,6" />
     </svg>
   );
 }
@@ -38,25 +57,6 @@ function ResumeIcon() {
   );
 }
 
-function MailIcon() {
-  return (
-    <svg
-      width="23"
-      height="23"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-      <polyline points="22,6 12,13 2,6" />
-    </svg>
-  );
-}
-
 function DiscordIcon() {
   return (
     <svg width="26" height="20" viewBox="0 0 127.14 96.36" fill="currentColor" aria-hidden="true">
@@ -69,7 +69,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[92svh] items-center justify-center px-5 pt-12"
+      className="relative flex min-h-[92svh] items-center justify-center px-5 pb-16 pt-20"
     >
       <div className="max-w-[900px] text-center">
         <img
@@ -85,20 +85,24 @@ export default function Hero() {
         >
           {site.name}.
         </h1>
-        {site.availability && (
-          <p
-            data-reveal
-            style={{ transitionDelay: "0.2s" }}
-            className="mt-6 inline-flex items-center gap-2 rounded-full border border-hairline px-4 py-1.5 text-[13px] font-medium text-ink-secondary"
-          >
-            <span className="h-2 w-2 rounded-full bg-[#30d158]" />
-            {site.availability}
-          </p>
-        )}
-        <div
+        <p
+          data-reveal
+          style={{ transitionDelay: "0.2s" }}
+          className="mx-auto mt-8 max-w-[720px] text-[17px] leading-relaxed md:text-lg"
+        >
+          {intro.greeting}
+        </p>
+        <p
           data-reveal
           style={{ transitionDelay: "0.3s" }}
-          className="mt-8 flex flex-wrap items-center justify-center gap-4"
+          className="mx-auto mt-4 max-w-[720px] text-[15px] leading-relaxed text-ink-secondary md:text-[17px]"
+        >
+          {intro.interests}
+        </p>
+        <div
+          data-reveal
+          style={{ transitionDelay: "0.4s" }}
+          className="mt-9 flex flex-wrap items-center justify-center gap-4"
         >
           <a
             href="#projects"
@@ -115,8 +119,8 @@ export default function Hero() {
         </div>
         <div
           data-reveal
-          style={{ transitionDelay: "0.4s" }}
-          className="mt-8 flex items-center justify-center gap-6"
+          style={{ transitionDelay: "0.5s" }}
+          className="mt-9 flex items-center justify-center gap-6"
         >
           <a
             href={site.github}
@@ -168,9 +172,9 @@ export default function Hero() {
         </div>
       </div>
       <a
-        href="#about"
-        aria-label="Scroll down to the about section"
-        className="scroll-cue absolute bottom-8 left-1/2 text-ink-secondary/60 transition-colors hover:text-ink"
+        href="#projects"
+        aria-label="Scroll down to projects"
+        className="scroll-cue absolute bottom-6 left-1/2 text-ink-secondary/60 transition-colors hover:text-ink"
       >
         <svg width="14" height="9" viewBox="0 0 14 9" fill="none" aria-hidden="true">
           <path

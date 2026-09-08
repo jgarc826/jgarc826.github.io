@@ -1,7 +1,6 @@
 import { site } from "@/lib/content";
 
 const links = [
-  { label: "About", href: "#about", mobileHidden: true },
   { label: "Projects", href: "#projects", mobileHidden: false },
   { label: "Experience", href: "#experience", mobileHidden: true },
   { label: "Contact", href: "#contact", mobileHidden: false },

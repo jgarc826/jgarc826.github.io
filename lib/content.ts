@@ -2,8 +2,6 @@
 
 export const site = {
   name: "Jessy Garcia",
-  // Small pill on the hero. Set to "" to hide it.
-  availability: "Open to internships",
   email: "jgarc826@ucr.edu",
   github: "https://github.com/jgarc826",
   // TODO: paste your Discord profile or server invite link here.
