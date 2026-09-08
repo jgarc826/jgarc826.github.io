@@ -20,40 +20,6 @@ export const intro = {
     "I'm interested in AI development research, embedded systems, performance optimization, and teaching.",
 };
 
-export type AboutFact = {
-  label: string;
-  value: string;
-  sub?: string;
-  size?: "wide"; // wide facts span two columns on desktop
-  gradient?: boolean; // one card gets the colorful treatment
-};
-
-export const about = {
-  facts: [
-    {
-      label: "School",
-      value: "UC Riverside",
-      sub: "B.S. Data Science · Dec 2027",
-      size: "wide",
-    },
-    {
-      label: "Toolbox",
-      value: "Python · C++ · SQL · React",
-      sub: "PyTorch, Pandas, Next.js, Docker, GCP",
-      size: "wide",
-    },
-    { label: "Based in", value: "Riverside, CA", sub: "Go Highlanders" },
-    { label: "Open source", value: "wasm-bpf", sub: "2 PRs merged upstream" },
-    {
-      label: "Next up",
-      value: "jessygarcia.tech",
-      sub: "Coming soon",
-      size: "wide",
-      gradient: true,
-    },
-  ] satisfies AboutFact[],
-};
-
 export type Project = {
   title: string;
   description: string;

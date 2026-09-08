@@ -1,4 +1,4 @@
-import { about, intro } from "@/lib/content";
+import { intro } from "@/lib/content";
 
 export default function About() {
   return (
@@ -17,46 +17,6 @@ export default function About() {
         >
           {intro.interests}
         </p>
-        <div className="mt-14 grid gap-5 md:grid-cols-4">
-          {about.facts.map((fact, i) => (
-            <div
-              key={fact.label}
-              data-reveal
-              style={{ transitionDelay: `${i * 0.06}s` }}
-              className={fact.size === "wide" ? "md:col-span-2" : ""}
-            >
-              <div
-                className={`h-full rounded-[20px] p-6 transition-transform duration-300 hover:-translate-y-0.5 ${
-                  fact.gradient ? "bento-gradient" : "bg-surface"
-                }`}
-              >
-                <p
-                  className={`text-[13px] font-medium ${
-                    fact.gradient ? "text-white/80" : "text-ink-secondary"
-                  }`}
-                >
-                  {fact.label}
-                </p>
-                <p
-                  className={`mt-2 text-xl font-semibold tracking-tight ${
-                    fact.gradient ? "text-white" : ""
-                  }`}
-                >
-                  {fact.value}
-                </p>
-                {fact.sub && (
-                  <p
-                    className={`mt-1 text-[15px] ${
-                      fact.gradient ? "text-white/80" : "text-ink-secondary"
-                    }`}
-                  >
-                    {fact.sub}
-                  </p>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
