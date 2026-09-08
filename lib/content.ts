@@ -14,8 +14,6 @@ export const site = {
 export const intro = {
   greeting:
     "Hello! My name is Jessy Garcia, and I'm a Data Science student at UC Riverside (Chancellor's Scholar, 3.7 GPA) with experience in software engineering, research, and teaching.",
-  interests:
-    "I'm interested in AI development research, embedded systems, performance optimization, and teaching.",
 };
 
 export type Project = {

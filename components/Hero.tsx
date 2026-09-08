@@ -92,13 +92,6 @@ export default function Hero() {
         >
           {intro.greeting}
         </p>
-        <p
-          data-reveal
-          style={{ transitionDelay: "0.3s" }}
-          className="mx-auto mt-4 max-w-[720px] text-[15px] leading-relaxed text-ink-secondary md:text-[17px]"
-        >
-          {intro.interests}
-        </p>
         <div
           data-reveal
           style={{ transitionDelay: "0.4s" }}
