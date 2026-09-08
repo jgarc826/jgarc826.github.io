@@ -1,31 +1,28 @@
-import { about } from "@/lib/content";
+import { about, intro } from "@/lib/content";
 
 export default function About() {
   return (
     <section id="about" className="scroll-mt-12 px-5 pb-24 md:pb-32">
       <div className="mx-auto max-w-[980px]">
-        <h2
+        <p
           data-reveal
-          className="text-[clamp(2rem,5vw,3rem)] font-semibold tracking-[-0.015em]"
+          className="text-[clamp(1.375rem,3vw,2rem)] font-medium leading-snug tracking-[-0.01em]"
         >
-          About. <span className="text-ink-secondary">A little context.</span>
-        </h2>
-        <div className="mt-12 grid gap-5 md:grid-cols-4">
-          <div data-reveal className="md:col-span-2 md:row-span-2">
-            <div className="flex h-full flex-col rounded-[20px] bg-surface p-8">
-              <p className="text-[13px] font-medium text-ink-secondary">
-                About me
-              </p>
-              <p className="mt-4 text-[19px] leading-relaxed md:text-[21px]">
-                {about.bio}
-              </p>
-            </div>
-          </div>
+          {intro.greeting}
+        </p>
+        <p
+          data-reveal
+          style={{ transitionDelay: "0.1s" }}
+          className="mt-6 text-[clamp(1.125rem,2.2vw,1.5rem)] leading-relaxed text-ink-secondary"
+        >
+          {intro.interests}
+        </p>
+        <div className="mt-14 grid gap-5 md:grid-cols-4">
           {about.facts.map((fact, i) => (
             <div
               key={fact.label}
               data-reveal
-              style={{ transitionDelay: `${(i + 1) * 0.06}s` }}
+              style={{ transitionDelay: `${i * 0.06}s` }}
               className={fact.size === "wide" ? "md:col-span-2" : ""}
             >
               <div

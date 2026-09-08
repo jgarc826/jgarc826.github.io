@@ -2,13 +2,22 @@
 
 export const site = {
   name: "Jessy Garcia",
-  role: "Data science student at UC Riverside",
-  tagline: "I like building things that feel simple, look clean, and just work.",
-  // Small pill above the hero greeting. Set to "" to hide it.
+  // Small pill on the hero. Set to "" to hide it.
   availability: "Open to internships",
   email: "jgarc826@ucr.edu",
   github: "https://github.com/jgarc826",
+  // TODO: paste your Discord profile or server invite link here.
+  discord: "#",
   linkedin: "https://www.linkedin.com/in/jessygarcia2/",
+  // Set to "/resume.pdf" once the public-ready resume PDF is added to public/.
+  resume: "",
+};
+
+export const intro = {
+  greeting:
+    "Hello! My name is Jessy Garcia, and I'm a Data Science student at UC Riverside (Chancellor's Scholar, 3.7 GPA) with experience in software engineering, research, and teaching.",
+  interests:
+    "I'm interested in AI development research, embedded systems, performance optimization, and teaching.",
 };
 
 export type AboutFact = {
@@ -20,12 +29,11 @@ export type AboutFact = {
 };
 
 export const about = {
-  bio: "I'm Jessy — a data science student at UC Riverside who likes building things that actually ship: an AI assistant that helps students keep up with classes, machine learning on heart rhythms, research linking EV adoption to asthma outcomes, and open-source work on a WebAssembly runtime. Wherever I'm working, the goal is the same — take something messy and make it feel obvious.",
   facts: [
     {
       label: "School",
       value: "UC Riverside",
-      sub: "B.S. Data Science · 3.7 GPA",
+      sub: "B.S. Data Science · Dec 2027",
       size: "wide",
     },
     {
