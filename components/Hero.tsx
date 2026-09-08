@@ -74,9 +74,9 @@ export default function Hero() {
       <div className="max-w-[900px] text-center">
         <img
           data-reveal
-          src="/portrait.jpg"
+          src="/portrait-square.jpg"
           alt="Portrait of Jessy Garcia"
-          className="mx-auto h-40 w-40 rounded-full object-cover object-top shadow-[0_8px_30px_rgba(0,0,0,0.12)] ring-1 ring-black/10 md:h-48 md:w-48"
+          className="mx-auto h-40 w-40 rounded-full object-cover shadow-[0_8px_30px_rgba(0,0,0,0.12)] ring-1 ring-black/10 md:h-48 md:w-48"
         />
         <h1
           data-reveal
